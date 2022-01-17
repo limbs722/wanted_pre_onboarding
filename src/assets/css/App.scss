@@ -11,12 +11,16 @@ body {
   background-color: #f8f8fa;
 }
 
-ul ol {
+ul, ol {
   list-style: none;
 }
 
 a, a:active, a:hover, a:visited {
   color: inherit;
+}
+
+svg:not(:root) {
+  overflow: hidden;
 }
 
 * {
@@ -37,6 +41,21 @@ strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, 
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
 }
 
 [class^="icon-"], [class*=" icon-"] {

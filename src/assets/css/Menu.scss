@@ -24,6 +24,7 @@
   li {
     height: inherit;
     display: inline-block;
+
     a {
       position: relative;
       vertical-align: middle;
@@ -33,6 +34,7 @@
       padding: 15px;
       display: inline-block;
     }
+
     &:after {
       height: 100%;
       content: "";
@@ -46,6 +48,13 @@
       right: -5px;
       pointer-events: none;
       font-style: normal;
+    }
+
+    a > span {
+      position: absolute;
+      top: 10px;
+      right: -7px;
+      pointer-events: none;
     }
   }
 }

@@ -1,0 +1,47 @@
+@import './Config.scss';
+
+.Aside_className {
+  height: 100%;
+  padding: 10px 0;
+
+  &.isLoggedIn {
+    padding: 9px 0;
+  }
+  
+  & > ul {
+    height: 100%;
+    margin: 0;
+
+    li * {
+      @media (min-width: 1200px) {
+        padding: 0 10px;
+      }
+      height: 100%;
+      padding: 0 5px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      line-height: 1;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+
+      .notiButton {
+        position: relative;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+}

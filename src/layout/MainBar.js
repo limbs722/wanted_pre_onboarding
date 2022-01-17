@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from './';
+import { Menu, Aside } from './';
 import { ICON_MENU } from '../utils/image';
 import '../assets/css/MainBar.scss'
 
@@ -24,6 +24,7 @@ const MainBar = () => {
                     data-attribute-id='gnb' data-gnb-kind='singupLogin'>회원가입하기</button>
           </div>
           <Menu/>
+          <Aside/>
         </nav>
       </div>
     </div>
