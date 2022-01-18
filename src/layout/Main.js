@@ -7,12 +7,12 @@ const Main = () => {
       <main className='Main_Main'>
         <div className='TopBanner_TopBanner'>
           <Slider />
-          <button className='TopBanner_arrow_TopBanner_nextArrow' aria-label='nextArrowButton'>
+          {/* <button className='TopBanner_arrow_TopBanner_nextArrow' aria-label='nextArrowButton'>
 
           </button>
           <button className='TopBanner_arrow_TopBanner_prevArrow' aria-label='prevArrowButton'>
             
-          </button>
+          </button> */}
         </div>
       </main>
     </>
