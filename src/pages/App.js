@@ -1,11 +1,12 @@
 import React from 'react';
-import { MainBar } from '../layout';
+import { MainBar, Main } from '../layout';
 import '../assets/css/App.scss';
 
 const App = () => {
   return (
     <>
       <MainBar />
+      <Main />
     </>
   );
 }
