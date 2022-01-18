@@ -1,4 +1,12 @@
-@import './Config.scss';
+@media (max-width: 767px) {
+  .Menu_className {
+    text-align: left;
+
+    .smMoreVisible {
+      display: none;
+    }
+  }
+}
 
 .Menu_className {
   height: inherit;

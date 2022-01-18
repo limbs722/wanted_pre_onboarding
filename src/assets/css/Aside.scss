@@ -1,5 +1,3 @@
-@import './Config.scss';
-
 .Aside_className {
   height: 100%;
   padding: 10px 0;
@@ -12,10 +10,7 @@
     height: 100%;
     margin: 0;
 
-    li * {
-      @media (min-width: 1200px) {
-        padding: 0 10px;
-      }
+    li > * {
       height: 100%;
       padding: 0 5px;
       font-size: 14px;
@@ -30,10 +25,97 @@
       height: 100%;
       vertical-align: middle;
 
+      a {
+        display: inline-block;
+        vertical-align: bottom;
+        line-height: 32px;
+      }
+
+      .searchButton {
+        position: relative;
+        margin-top: 5px;
+      }
+
       .notiButton {
         position: relative;
         margin-right: 10px;
         margin-top: 5px;
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+
+      .profileButton {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: top;
+        padding: 0;
+        margin-right: 11px;
+
+        .avatarBorder {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 1px solid #e1e2e3;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          & > div {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-position: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .menuButton {
+          margin-right: 10px;
+          padding-left: 10px;
+
+          & > svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .dashboardButton {
+        font-size: 13px;
+        color: #666;
+        line-height: 30px;
+        height: 30px;
+        border: 1px solid #e1e2e3;
+        border-radius: 15px;
+        padding: 0 10px;
+        margin-left: 15px;
+        font-weight: 400;
+      }
+    }
+
+    .profileBox {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 5px;
+    }
+
+    .leftDivision {
+      display: inline-flex;
+      &:before {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 10px;
+        background-color: #e1e2e3;
+        margin: auto 10px;
       }
     }
   }
@@ -43,5 +125,40 @@
     padding: 0;
     border: 0;
     background: none;
+  }
+
+  @media (max-width: 767px) {
+    padding: 14px 0;
+
+    & > ul {
+      margin-top: -5px;
+      .mdMoreVisible {
+        display: none;
+      }
+      .profileBox {
+        margin-right: 0;
+      }
+
+      li {
+        .searchButton, .dashboardButton {
+          margin: 0;
+        }
+        .profileButton {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & > ul {
+      li > * {
+        padding: 0 10px;
+      }
+
+      &.Aside_visibleMenu {
+        display: none !important;
+      }
+    }
   }
 }

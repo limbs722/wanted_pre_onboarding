@@ -1,17 +1,33 @@
-@import './Config.scss';
+@media (min-width: 1200px) {
+  .MainBar_MainBar {
+    margin: 0 auto;
+    width: 87.72%;
+  }
+}
+
+@media (max-width: 767px) {
+  .MainBar_MainBar, .MainBar_MainBar.isLoggedIn {
+    height: 110px;
+  }
+  .MainBar_MainBar_nav_top {
+    height: 60px;
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .Padding_padding {
+    height: 110px;
+  }
+}
+
+.Padding_padding {
+  height: 50px;
+}
 
 .NavBar {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   z-index: 100;
-
-  @media (min-width: 1200px) {
-    .MainBar_MainBar {
-      margin: 0 auto;
-      width: 87.72%;
-    }
-  }
 
   .MainBar_MainBar {
     position: relative;
@@ -50,7 +66,7 @@
       }
       .icon-logo_new {
         &:before {
-          content: $ICON_LOGO_NEW;
+          content: url('../images/icon-logo_new.png');
         }
       }
     }
