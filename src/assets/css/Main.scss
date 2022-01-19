@@ -1,0 +1,18 @@
+.TopBanner_TopBanner {
+  position: relative;
+  overflow: hidden;
+  .slick-slider {
+    margin-bottom: 0;
+    .slick-slide {
+      position: relative;
+    }
+  }
+
+  .slick-track {
+    .slick-slide {
+      .slick-cloned {
+        width: 1060px;
+      }
+    }
+  }
+}
