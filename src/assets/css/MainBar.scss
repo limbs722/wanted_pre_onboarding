@@ -1,26 +1,32 @@
-@media (min-width: 1200px) {
-  .MainBar_MainBar {
+.MainBar_MainBar {
+  @media (min-width: 1200px) {
     margin: 0 auto;
     width: 87.72%;
   }
-}
 
-@media (max-width: 767px) {
-  .MainBar_MainBar, .MainBar_MainBar.isLoggedIn {
+  @media (max-width: 767px) {
     height: 110px;
   }
-  .MainBar_MainBar_nav_top {
-    height: 60px;
-    width: 100%;
-    padding: 15px 20px;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    height: 110px;
   }
-  .Padding_padding {
+}
+
+.MainBar_MainBar.isLoggedIn {
+  @media (max-width: 767px) {
+    height: 110px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
     height: 110px;
   }
 }
 
 .Padding_padding {
   height: 50px;
+  @media (max-width: 767px) {
+    height: 110px;
+  }
 }
 
 .NavBar {
@@ -35,7 +41,7 @@
     height: 50px;
   }
 
-  .MainBar_MainBar_nav, .MainBar_MainBar_nav_top {
+  .MainBar_MainBar_nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,5 +96,19 @@
   .MainBar_MainBar_nav_top .MainBar_hamberger {
     margin-top: -2px;
     margin-right: 15px;
+  }
+
+  .MainBar_MainBar_nav_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      height: 60px;
+      width: 100%;
+      padding: 15px 20px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding: 15px 0;
+    }
   }
 }

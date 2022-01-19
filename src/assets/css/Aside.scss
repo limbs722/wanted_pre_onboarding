@@ -6,7 +6,7 @@
     padding: 9px 0;
   }
   
-  & > ul {
+  ul > {
     height: 100%;
     margin: 0;
 
@@ -17,6 +17,10 @@
       font-weight: 600;
       color: #333;
       line-height: 1;
+
+      @media (min-width: 1200px) {
+        padding: 0 10px;
+      }
     }
 
     li {
@@ -34,6 +38,9 @@
       .searchButton {
         position: relative;
         margin-top: 5px;
+        @media (max-width: 767px) {
+          margin: 0;
+        }
       }
 
       .notiButton {
@@ -54,6 +61,9 @@
         vertical-align: top;
         padding: 0;
         margin-right: 11px;
+        @media (max-width: 767px) {
+          margin-right: 0;
+        }
 
         .avatarBorder {
           width: 32px;
@@ -97,6 +107,9 @@
         padding: 0 10px;
         margin-left: 15px;
         font-weight: 400;
+        @media (max-width: 767px) {
+          margin: 0;
+        }
       }
     }
 
@@ -105,6 +118,12 @@
       flex-direction: row;
       align-items: center;
       margin-right: 5px;
+      @media (min-width: 768px) and (max-width: 991px) {
+        margin-right: 0;
+      }
+      @media (max-width: 767px) {
+        margin-right: 0;
+      }
     }
 
     .leftDivision {
@@ -118,6 +137,16 @@
         margin: auto 10px;
       }
     }
+
+    .mdMoreVisible {
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        display: none;
+      }
+    }
   }
 
   button {
@@ -127,38 +156,16 @@
     background: none;
   }
 
-  @media (max-width: 767px) {
-    padding: 14px 0;
-
-    & > ul {
-      margin-top: -5px;
-      .mdMoreVisible {
-        display: none;
-      }
-      .profileBox {
-        margin-right: 0;
-      }
-
-      li {
-        .searchButton, .dashboardButton {
-          margin: 0;
-        }
-        .profileButton {
-          margin-right: 0;
-        }
-      }
+  &.Aside_visibleMenu {
+    @media (min-width: 1200px) {
+      display: none !important;
     }
   }
+}
 
-  @media (min-width: 1200px) {
-    & > ul {
-      li > * {
-        padding: 0 10px;
-      }
-
-      &.Aside_visibleMenu {
-        display: none !important;
-      }
-    }
+.Aside_className > ul {
+  @media (max-width: 767px) {
+    margin-top: -5px;
+    padding: 14px 0;
   }
 }

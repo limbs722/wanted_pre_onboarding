@@ -1,20 +1,31 @@
-@media (max-width: 767px) {
-  .Menu_className {
-    text-align: left;
-
-    .smMoreVisible {
-      display: none;
-    }
-  }
-}
-
 .Menu_className {
   height: inherit;
   text-align: center;
   margin: 0;
 
+  @media (min-width: 992px) and (max-width: 1100px) {
+    display: flex;
+    flex: 1 1;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    justify-content: flex-start;
+    margin-right: 30px;
+  }
+
   @media (min-width: 1200px) {
     .xsOnly {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+
+  .smMoreVisible {
+    @media (max-width: 767px) {
       display: none;
     }
   }

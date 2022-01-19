@@ -4,50 +4,55 @@
   .slick-slider {
     margin-bottom: 0;
     .slick-slide {
+      position: relative;
+
       @media (min-width: 1200px) {
         padding: 0 12px;
         box-sizing: content-box;
       }
-      position: relative;
-      
-      img {
+
+      .banner-image {
         filter: brightness(50%);
+        @media (min-width: 768px) and (max-width: 1199px) {
+          height: 183px;
+          border-radius: 3px 3px 0 0;
+        }
+
+        .item-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+      }
+
+      .banner-image > a {
+        @media (min-width: 768px) and (max-width: 1199px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
       }
 
       &.slick-active {
-        img {
+        .banner-image {
           filter: brightness(100%);
         }
+
         .item-info {
           text-align: left;
           opacity: 100;
-          h2 {
-            margin-top: 20px;
-            font-size: 18px;
-            line-height: 1;
-            font-weight: 700;
-            color: #333;
-            width: 'auto';
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-          }
-      
-          h3 {
-            margin-top: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 1.15;
-            color: #666;
-            width: 'auto';
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+
+          @media (min-width: 768px) and (max-width: 1199px) {
+            text-align: center;
           }
         }
       }
 
       .item-info {
+        text-align: center;
+
         @media (min-width: 1200px) {
           position: absolute;
           bottom: 28px;
@@ -59,7 +64,23 @@
           text-align: left;
           left: 34px;
         }
-        text-align: center;
+
+        .item-divider {
+          @media (min-width: 768px) and (max-width: 1199px) {
+            display: none;
+          }
+
+          @media (min-width: 1200px) {
+            display: block;
+          }
+          height: 1px;
+          margin: 0;
+          border: none;
+          -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+          background-color: #ececec;
+        }
 
         h2 {
           @media (min-width: 1200px) {
@@ -68,6 +89,15 @@
             font-size: 20px;
             line-height: 1.5;
           }
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 1;
+          font-weight: 700;
+          color: #333;
+          width: 'auto';
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
         }
 
         h3 {
@@ -78,15 +108,25 @@
             line-height: 1.64;
             color: #333;
           }
+          margin-top: 6px;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.15;
+          color: #666;
+          width: 'auto';
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
         }
 
-        @media (min-width: 1200px) {
-          hr {
+        hr {
+          @media (min-width: 1200px) {
             display: block;
           }
         }
-        @media (min-width: 1200px) {
-          a {
+
+        a {
+          @media (min-width: 1200px) {
             margin: 6px 0 0 13px;
           }
         }
@@ -97,7 +137,16 @@
         font-weight: 700;
         line-height: 1;
         color: #36f;
+        padding: 6px 8px;
         display: inline-flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        min-width: 64px;
+        box-sizing: border-box;
+        border-radius: 25px;
+        cursor: pointer;
 
         .Button_label {
           width: 100%;
@@ -133,6 +182,14 @@
           }
         }
       }
+    }
+
+    .slick-slide > div {
+      margin: 20px 10px;
+    }
+
+    .slick-slide>div>div>div>a>img {
+      display: inline-block;
     }
   }
 
@@ -192,18 +249,5 @@
     border: 0;
     background: none;
     cursor: pointer;
-  }
-
-  @media (min-width: 1200px) {
-    .item-info {
-
-      hr {
-        display: block;
-      }
-
-      a {
-        margin: 6px 0 0 13px;
-      }
-    }
   }
 }
