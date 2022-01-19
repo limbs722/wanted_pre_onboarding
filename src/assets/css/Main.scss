@@ -5,86 +5,100 @@
     margin-bottom: 0;
     .slick-slide {
       position: relative;
-    }
-  }
 
-  .item-info {
-    .info-directButton {
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1;
-      color: #36f;
-    }
+      img {
+        filter: brightness(50%);
+      }
 
-    h2 > {
-      margin-top: 20px;
-      font-size: 18px;
-      line-height: 1;
-      font-weight: 700;
-      color: #333;
-      width: "auto";
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
+      &.slick-active {
+        img {
+          filter: brightness(100%);
+        }
+        .item-info {
+          text-align: left;
+          opacity: 100;
+          h2 > {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 700;
+            color: #333;
+            width: "auto";
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+      
+          h3 > {
+            margin-top: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.15;
+            color: #666;
+            width: "auto";
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
 
-    h3 > {
-      margin-top: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 1.15;
-      color: #666;
-      width: "auto";
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
+      .item-info {
+        text-align: center;
+      }
 
-  span {
-    &.Button_label {
-      width: 100%;
-      font-size: inherit;
-      font-weight: inherit;
-      display: inherit;
-      -webkit-align-items: inherit;
-      -ms-flex-align: inherit;
-      align-items: inherit;
-      -webkit-justify-content: inherit;
-      -ms-flex-pack: inherit;
-      justify-content: inherit;
-      color: inherit;
-    }
-    
-    &.endIcon {
-      margin-top: -2px;
-      margin-right: -1px;
-      margin-left: 2px;
-    }
+      
+      .info-directButton {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        color: #36f;
+      }
 
-    &.SvgIcon {
-      width: 100%;
-      display: flex;
-      -webkit-align-items: inherit;
-      -ms-flex-align: inherit;
-      align-items: inherit;
-      -webkit-justify-content: inherit;
-      -ms-flex-pack: inherit;
-      justify-content: inherit;
-    }
-
-    &.SvgIcon_SvgIcon {
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      width: 1em;
-      height: 1em;
-      display: inline-block;
-      fill: currentColor;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-      font-size: inherit;
+      .Button_label {
+        width: 100%;
+        font-size: inherit;
+        font-weight: inherit;
+        display: inherit;
+        -webkit-align-items: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        -webkit-justify-content: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+        color: inherit;
+      }
+      
+      .Button_endIcon {
+        margin-top: -2px;
+        margin-right: -1px;
+        margin-left: 2px;
+      }
+  
+      .SvgIcon {
+        width: 100%;
+        display: flex;
+        -webkit-align-items: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        -webkit-justify-content: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+      }
+  
+      .SvgIcon_SvgIcon {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        fill: currentColor;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        font-size: inherit;
+      }
     }
   }
 
@@ -118,6 +132,7 @@
     padding: 0;
     border: 0;
     background: none;
+    cursor: pointer;
   }
 
   @media (min-width: 1200px) {
@@ -126,7 +141,14 @@
         padding: 0 12px;
         box-sizing: content-box;
       }
+
+      &.slick-active {
+        .item-info {
+          opacity: 100;
+        }
+      }
     }
+
     .item-info {
       position: absolute;
       bottom: 28px;
